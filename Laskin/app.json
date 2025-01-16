@@ -36,6 +36,21 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "b93b967f-34e5-4ce6-ad3f-9d61eb7a5335"
+      }
+    },
+    "owner": "lemonish",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/b93b967f-34e5-4ce6-ad3f-9d61eb7a5335"
     }
   }
 }
