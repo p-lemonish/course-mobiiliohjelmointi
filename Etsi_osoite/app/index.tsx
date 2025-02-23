@@ -12,7 +12,7 @@ export default function App() {
     longitudeDelta: 0.05,
   });
   const [address, setAddress] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const onButtonPress = async () => {
     const stringBuild = address.replace(/ /g, "+");
