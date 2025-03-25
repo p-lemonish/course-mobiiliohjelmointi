@@ -1,1 +1,28 @@
-import React from 'react'; import { View, Text } from 'react-native'; export default function App() { return (<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}><Text>Welcome to Osoitekirja\!</Text></View>); }
+import React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import ListComponent from "./ListComponent";
+import MapComponent from "./MapComponent";
+
+type RootStackParamList = {
+    Lista: undefined;
+    Kartta: { addressItem: any; };
+};
+
+export default function App() {
+    const Stack = createNativeStackNavigator<RootStackParamList>();
+    return (
+        <Stack.Navigator initialRouteName="Lista">
+            <Stack.Screen
+                name="Lista"
+                component={ListComponent}
+                options={{ title: "Places" }}
+            />
+            <Stack.Screen
+                name="Kartta"
+                component={MapComponent}
+                options={{ title: "Map" }}
+            />
+        </Stack.Navigator>
+    );
+}
+
